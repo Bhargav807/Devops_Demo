@@ -4,8 +4,9 @@ import dotenv from 'dotenv';
 const connectDB = async() => {
     try
     {
-        const conn = await mongoose.connect(process.env.MONGO_URL);
-        console.log(`Connected to Mongodb Database ${conn.connection.host}`.bgMagenta.white);
+        const conn = await mongoose.connect('mongodb+srv://toor:toor@clusterkisan.hpraku2.mongodb.net/ecommerce');
+        
+        console.log(`Connected to Mongodb Database`.bgMagenta.white);
     }
     catch(error)
     {
