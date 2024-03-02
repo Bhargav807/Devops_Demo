@@ -8,6 +8,7 @@ import categoryRoutes from './routes/categoryRoutes.js'
 import productRoutes from './routes/productRoute.js'
 import cors from "cors";
 import path from 'path';
+import { fileURLToPath } from 'url';
 //configure env
 // when file path is not root use dotenv.config({path:''}); else dotenv.config();
 dotenv.config();
@@ -15,6 +16,10 @@ dotenv.config();
 //database config
 connectDB();
 
+
+//esmodule fix
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 //rest object
 const app = express();
 
